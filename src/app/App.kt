@@ -1,25 +1,61 @@
 package app
 
+import kotlinx.css.Color
+import kotlinx.css.Color.Companion.white
+import kotlinx.css.TextAlign
+import kotlinx.css.backgroundColor
+import kotlinx.css.color
+import kotlinx.css.fontSize
+import kotlinx.css.height
+import kotlinx.css.paddingBottom
+import kotlinx.css.paddingLeft
+import kotlinx.css.paddingRight
+import kotlinx.css.paddingTop
+import kotlinx.css.px
+import kotlinx.css.textAlign
 import react.*
 import react.dom.*
 import logo.*
+import styled.css
+import styled.styledDiv
+import styled.styledP
 import ticker.*
 
 class App : RComponent<RProps, RState>() {
   override fun RBuilder.render() {
-    div("App-header") {
-      logo()
-      h2 {
-        +"Welcome to React with Kotlin"
+    styledDiv {
+      css {
+        textAlign = TextAlign.center
       }
-    }
-    p("App-intro") {
-      +"To get started, edit "
-      code { +"app/App.kt" }
-      +" and save to reload."
-    }
-    p("App-ticker") {
-      ticker()
+      styledDiv {
+        css {
+          backgroundColor = Color("#000")
+          height = 160.px
+          paddingTop = 20.px
+          paddingRight = 20.px
+          paddingBottom = 20.px
+          paddingLeft = 20.px
+          color = white
+        }
+        logo()
+        h2 {
+          +"Welcome to React with Kotlin"
+        }
+      }
+      styledP {
+        css {
+          fontSize = 18.px
+        }
+        +"To get started, edit "
+        code { +"app/App.kt" }
+        +" and save to reload."
+      }
+      styledP {
+        css {
+          fontSize = 16.px
+        }
+        ticker()
+      }
     }
   }
 }
