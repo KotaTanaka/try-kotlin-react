@@ -1,4 +1,4 @@
-package ticker
+package components
 
 import react.*
 import kotlin.browser.*

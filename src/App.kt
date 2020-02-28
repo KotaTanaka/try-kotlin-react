@@ -15,11 +15,11 @@ import kotlinx.css.px
 import kotlinx.css.textAlign
 import react.*
 import react.dom.*
-import logo.*
+import components.logo.*
+import components.ticker
 import styled.css
 import styled.styledDiv
 import styled.styledP
-import ticker.*
 
 class App : RComponent<RProps, RState>() {
   override fun RBuilder.render() {
@@ -47,7 +47,7 @@ class App : RComponent<RProps, RState>() {
           fontSize = 18.px
         }
         +"To get started, edit "
-        code { +"app/App.kt" }
+        code { +"App.kt" }
         +" and save to reload."
       }
       styledP {
